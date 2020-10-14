@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightWhite"
+    tools:context=".Time_Activity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="393dp"
+        android:layout_height="57dp"
+        android:animateLayoutChanges="true"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/back_pressed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="15dp"
+            android:src="@drawable/general_back_icon" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="65dp"
+        android:fontFamily="monospace"
+        android:padding="10dp"
+        android:text="Time table"
+        android:textAllCaps="true"
+        android:textColor="#2C3139"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@id/relativeLayout5"
+        app:layout_constraintStart_toStartOf="@+id/relativeLayout"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout5"
+        android:layout_width="371dp"
+        android:layout_height="614dp"
+        android:background="@drawable/border"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        tools:layout_editor_absoluteX="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/materialCardView"
+            android:layout_width="283dp"
+            android:layout_height="193dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="46dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="102dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="30dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#2C3139"
+
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="40dp"
+                    android:text="Schedule for online class"
+                    android:textColor="@color/lightWhite"
+                    android:textSize="20dp" />
+
+                <Button
+                    android:id="@+id/ttbutton"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="123dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginTop="80dp"
+                    android:text="time table"
+                    android:textColor="@color/colorAccent"
+
+
+                    />
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/materialCardView2"
+            android:layout_width="278dp"
+            android:layout_height="216dp"
+            android:layout_below="@id/materialCardView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="40dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#2C3139">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="40dp"
+                    android:text="Schedule for Internal Exam"
+                    android:textColor="@color/lightWhite"
+                    android:textSize="20dp" />
+
+                <Button
+                    android:id="@+id/etbutton"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="123dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginTop="100dp"
+                    android:text="exam time table"
+                    android:textColor="@color/colorAccent"
+
+
+                    />
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
